@@ -1,14 +1,12 @@
 # bug-tracker
 AI-powered intelligent bug triage and resolution system
-# AI Lab POE Programs
+# AI Programs
 ## A* Algorithm in C++
 
 ```cpp
 #include <iostream>
 using namespace std;
-
 #define MAX 10
-
 int graph[MAX][MAX];
 int h[MAX];
 int n;
@@ -233,4 +231,46 @@ int main() {
 
 //     return 0;
 // }
+```
+```
+3. Logic / Truth Table
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+
+    cout << "A B | AND OR\n";
+
+    for(A=0;A<=1;A++) {
+        for(B=0;B<=1;B++) {
+            cout << A << " " << B << " | "
+                 << (A&&B) << "   "
+                 << (A||B) << endl;
+        }
+    }
+}
+```
+```4. Prolog Programs
+✅ Family Relationship
+parent(john, mary).
+parent(mary, sam).
+
+grandparent(X, Z) :- parent(X, Y), parent(Y, Z).
+✅ Factorial
+factorial(0,1).
+
+factorial(N,F):-
+    N>0,
+    N1 is N-1,
+    factorial(N1,F1),
+    F is N*F1.
+
+✅ Path Finding
+edge(a,b).
+edge(b,c).
+edge(c,d).
+
+path(X,Y):- edge(X,Y).
+path(X,Y):- edge(X,Z), path(Z,Y).
 ```
